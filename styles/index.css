@@ -1,0 +1,10 @@
+.example {
+  code {
+    @apply text-5xl;
+  }
+}
+.example-small {
+  code {
+    @apply text-lg;
+  }
+}
