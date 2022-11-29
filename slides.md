@@ -30,23 +30,27 @@ layout: fact
 
 # What is the "Web"
 
-- usually a "webpage" is:
-  - a file/collection of files stored on some other computer
-  - accessed through the internet
-- browser asks for file over the internet and computer sends it
-- usually a file is HTML
+- a metaphorical web
+- composed of computers around the world that talk to each other
+- computers can find each other with ip addresses
+- ip addresses are hard to remember so we have urls
+- web is composed of websites
+- which are composed of webpages
+  - file is HTML
   - can include both CSS and Javascript we will go over that in the next lessons
-```mermaid
-  flowchart LR
-    browser <--> server
-```
 
 ---
 
 # State of the web
 
 - early web was just html, css and js
-- then there was databases and 
+- communicating with a server and database
+- modern web frameworks
+  - react
+  - vue
+  - angular
+  - svelte
+- typescript
 
 ---
 
