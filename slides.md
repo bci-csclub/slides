@@ -3,6 +3,7 @@ theme: seriph
 layout: cover
 class: 'text-center'
 highlighter: shiki
+colorSchema: "dark"
 ---
 
 # Intro To Web Development
@@ -178,3 +179,15 @@ layout: better-center
   - add a link to the mdn docs
   - and w3schools site
   - hint: look them up on google
+
+
+---
+
+# Next up
+- CSS
+- javascript
+- developing on your own computer
+- git and github
+- web frameworks
+  - mini project
+- maybe a whole club project
