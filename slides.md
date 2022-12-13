@@ -2,11 +2,11 @@
 theme: seriph
 layout: cover
 class: 'text-center'
+background: ''
 highlighter: shiki
-colorSchema: "dark"
 ---
 
-# Intro To Web Development
+# Intro To CSS
 
 ---
 
@@ -16,7 +16,7 @@ colorSchema: "dark"
 - as we learn we will add
   - features
   - interactivity
-  - and *style*
+  - and _style_
 - implement a project together
   - computer science club site
 - today we will learn HTML
@@ -25,69 +25,46 @@ colorSchema: "dark"
 layout: fact
 ---
 
-[where will write HTML today](https://stackblitz.com/edit/web-platform-zj7ksv?file=index.html)
+[where will write HTML and CSS today](https://stackblitz.com/edit/web-platform-7a31ff?file=index.css)
 
 ---
 
-# What is the "Web"
+# CSS
 
-- a metaphorical web
-- composed of computers around the world that talk to each other
-- computers can find each other with ip addresses
-- ip addresses are hard to remember so we have urls
-- web is composed of websites
-- which are composed of webpages
-  - file is HTML
-  - can include both CSS and Javascript we will go over that in the next lessons
+- Cascading Style Sheets
+- select html elements
+- change there style
 
----
-
-# State of the web
-
-- early web was just html, css and js
-- communicating with a server and database
-- modern web frameworks
-  - react
-  - vue
-  - angular
-  - svelte
-- typescript
-
----
-
-# HTML
-- markup language
-- structure your content
-- browsers reads "markup"
-- renders to your screen
 ---
 layout: better-center
 ---
 
-# HTML Element
+# CSS Rule
 
 ::example::
-```html
-  <p>Hello world</p>
-  
-  <p
-  class="small">
-  Hello world
-  </p>
+
+```css {1,3|2}
+h1 {
+  color: lavendar;
+}
 ```
+
 ---
 layout: better-center
 class: "example-small"
 ---
 
-# Structure of HTML
+# Adding to HTML
+
 ::example::
-```html
+
+```html {6}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="index.css" />
     <title>Template</title>
   </head>
   <body>
@@ -95,99 +72,304 @@ class: "example-small"
   </body>
 </html>
 ```
+
 ---
 layout: better-center
 ---
 
-# Headers
+# Element Selector
 
 ::example::
 
-```html
-<h1>Hello world</h1>
-<h2>Hello world</h2>
-<h3>Etc</h3>
+```css
+p {
+  color: blue;
+}
+
+p,
+h1,
+li {
+  background-color: red;
+}
 ```
+
 ::task::
+
 ### Task:
 
-- create an `h1` with your name in it
+- style the paragraph and header a different color
+
 ---
 layout: better-center
 ---
 
-# Paragraphs
+# ID Selector
+
 ::example::
 ```html
-<p>smaller text goes here</p>
+<h1 id="header">Header</h1>
 ```
+```css
+#header {
+  color: green;
+}
+```
+
 ::task::
+
 ### Task:
-- write one short thing about yourself under the title
+
+- add an ID to one element
+- style that element by it's ID
+
 ---
 layout: better-center
 ---
 
-# Images
+# Class Selector
+
 ::example::
+
 ```html
-<img 
-src="https://example.com/image.png"
-alt="This is the description of an image">
+<h1 class="header">Header</h1>
 ```
+```css
+.header {
+  color: gray;
+}
+```
+
 ::task::
+
 ### Task:
-- find an image online
-- add it to your site
+
+- !TODO
+
 ---
 layout: better-center
 ---
 
-# Lists
+# Colours
+
 ::example::
-```html
-  <ul>
-    <li>An item</li>
-    <li>Another item</li>
-  </ul>
-  <ol>
-    <li>Item one</li>
-    <li>Item two</li>
-  </ol>
+
+```css
+p {
+  color: red; /* name */
+  background-color: rgba(255, 255, 0, %50); /* yellow */
+  border-color: #00FFFF /* #0FF cyan hex code */
+}
 ```
+
 ::task::
+
 ### Task:
-- create a rank of fruits
-- create a list of programming languages
+
+- change the text and background color of the header
 ---
 layout: better-center
 ---
 
-# Links
-::example::
-```html
-  <a href="https://example.com">
-  Example link
-  </a>
-  <a href="/" target="_blank">
-  Root of the site
-  </a>
-```
-::task::
-### Task:
-- in a list
-  - add a link to the mdn docs
-  - and w3schools site
-  - hint: look them up on google
+# Text and Fonts
 
+::example::
+
+```css
+.small {
+  font-height: 15px;
+  font-style: italic;
+  font-wheight: bold;
+  font-family: "Fira Code";
+}
+```
+
+::task::
+
+### Task:
+
+- make a large class
+- apply it to a text element
+- make the text large and bold 
+- add a font from google fonts
 
 ---
+layout: better-center
+---
 
-# Next up
-- CSS
-- javascript
-- developing on your own computer
-- git and github
-- web frameworks
-  - mini project
-- maybe a whole club project
+# Box Model
+
+::example::
+- block box
+- inline box
+
+```css
+* {
+  border: 1px solid red;
+}
+```
+
+---
+layout: better-center
+---
+
+# div and span
+
+::example::
+
+```html
+<div></div>
+<!-- divider(block) -->
+<span></span>
+<!-- inline -->
+```
+
+::task::
+
+### Task:
+
+- experiment with different elements
+- what does there box look like
+- what is the default padding
+- how do they look nested
+
+---
+layout: better-center
+---
+
+# Borders
+
+::example::
+
+```css
+.card {
+  border-width: 1px;
+  border-style: solid;
+  border-colour: #39404f;
+  border: 1px solid #3940f;
+  border-radius: 5px;
+}
+```
+
+::task::
+
+### Task:
+
+- go to the tasks.html file
+- make each task a card
+
+---
+layout: better-center
+---
+
+# Margins
+
+::example::
+
+```css
+.box {
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin: 5px;
+}
+```
+
+::task::
+
+### Task:
+
+- add a margin to only the top and bottom
+---
+layout: better-center
+---
+
+# Padding
+
+::example::
+
+```css
+.padded {
+  padding: 10px 5px 10px 5px;
+}
+```
+
+::task::
+
+### Task:
+
+- add padding to you card 
+---
+layout: better-center
+---
+
+# Height and Width
+
+::example::
+
+- same for width
+```css
+.size {
+  height: 50px;
+  height: 50%;
+  height: 100vh;
+  max-height: 50px;
+  min-height: 30px;
+}
+```
+
+::task::
+
+### Task:
+
+- change the size of the cards
+---
+layout: better-center
+---
+# Flex Box
+
+::example::
+
+```
+
+```
+
+::task::
+
+### Task:
+
+- 
+---
+layout: better-center
+---
+
+# Grid
+
+::example::
+
+```
+
+```
+
+::task::
+
+### Task:
+
+- 
+---
+layout: better-center
+---
+
+# Animations
+
+::example::
+
+```
+
+```
+
+::task::
+
+### Task:
+
+- 
