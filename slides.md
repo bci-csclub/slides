@@ -10,16 +10,10 @@ highlighter: shiki
 
 ---
 
-# Structure
+# Semantic Markup
 
-- creating a personalized site
-- as we learn we will add
-  - features
-  - interactivity
-  - and _style_
-- implement a project together
-  - computer science club site
-- today we will learn HTML
+- html elements are semantic
+- don't define how they should look
 
 ---
 layout: fact
@@ -143,7 +137,8 @@ layout: better-center
 
 ### Task:
 
-- !TODO
+- add a class to one element
+- style that element
 
 ---
 layout: better-center
@@ -153,11 +148,14 @@ layout: better-center
 
 ::example::
 
-```css
+```css {2,3|4,5|6,7}
 p {
-  color: red; /* name */
-  background-color: rgba(255, 255, 0, %50); /* yellow */
-  border-color: #00FFFF /* #0FF cyan hex code */
+  color: red;
+  /* name */
+  background-color: rgba(255, 255, 0, %50);
+  /* yellow */
+  border-color: #00FFFF
+  /* #0FF cyan hex code */
 }
 ```
 
@@ -174,7 +172,7 @@ layout: better-center
 
 ::example::
 
-```css
+```css {2|3|4|5}
 .small {
   font-height: 15px;
   font-style: italic;
@@ -216,7 +214,7 @@ layout: better-center
 
 ::example::
 
-```html
+```html {1,2|3,4}
 <div></div>
 <!-- divider(block) -->
 <span></span>
@@ -240,7 +238,7 @@ layout: better-center
 
 ::example::
 
-```css
+```css {2|3|4|5|6}
 .card {
   border-width: 1px;
   border-style: solid;
@@ -265,7 +263,7 @@ layout: better-center
 
 ::example::
 
-```css
+```css {2|3|4|5|6}
 .box {
   margin-top: 5px;
   margin-right: 5px;
@@ -308,7 +306,7 @@ layout: better-center
 ::example::
 
 - same for width
-```css
+```css {2|3|4|5|6}
 .size {
   height: 50px;
   height: 50%;
