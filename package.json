@@ -2,12 +2,12 @@
   "name": "slides",
   "private": true,
   "scripts": {
-    "build": "slidev build",
-    "dev": "slidev --open",
-    "export": "slidev export"
+    "build": "slidev build javascript.md",
+    "dev": "slidev --open javascript.md",
+    "export": "slidev export javascript.md"
   },
   "dependencies": {
-    "@slidev/cli": "^0.37.1",
+    "@slidev/cli": "^0.40.2",
     "@slidev/theme-default": "*",
     "@slidev/theme-seriph": "*"
   }
